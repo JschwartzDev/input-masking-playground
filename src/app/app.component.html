@@ -1,20 +1,56 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<form style="text-align: center;">
+  <h3 style="margin-bottom: 5%">Input masking playground!</h3>
+  <div class="container">
+    <div class="ShortDate">
+      <label for="ShortDate">Short Date</label>
+      <br />
+      <input appMask MaskType="shortDate" formControlName="ShortDate" (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="LongDate">
+      <label for="LongDate">Long Date</label>
+      <br />
+      <input appMask MaskType="longDate" type="text" formControlName="LongDate" (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="ShortZipCode">
+      <label for="ShortZipCode">Short Zip Code</label>
+      <br />
+      <input appMask MaskType="shortZipCode" type="text" formControlName="ShortZipCode"
+        (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="LongZipCode">
+      <label for="LongZipCode">Long Zip Code</label>
+      <br />
+      <input appMask MaskType="longZipCode" type="text" formControlName="LongZipCode"
+        (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="PhoneNumber">
+      <label for="PhoneNumber">Phone Number</label>
+      <br />
+      <input appMask MaskType="phoneNumber" type="text" formControlName="PhoneNumber"
+        (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="SSN">
+      <label for="SocialSecurityNumber">Social Security Number</label>
+      <br />
+      <input appMask MaskType="ssn" type="text" formControlName="SocialSecurityNumber"
+        (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="CardNumber">
+      <label for="CardNumber">CardNumber</label>
+      <br />
+      <input appMask MaskType="cardNumber" type="text" formControlName="CardNumber" (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="CVV">
+      <label for="CVV">CVV</label>
+      <br />
+      <input appMask MaskType="cvv" type="text" formControlName="CVV" (unmasked)="checkUnmasked($event)">
+    </div>
+    <div class="DollarAmount">
+      <label for="DollarAmount">Dollar Amount</label>
+      <br />
+      <input appMask MaskType="dollarAmount" type="text" formControlName="DollarAmount"
+        (unmasked)="checkUnmasked($event)">
+    </div>
+  </div>
+</form>
